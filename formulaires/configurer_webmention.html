@@ -1,6 +1,6 @@
 <div class="formulaire_spip formulaire_configurer formulaire_#FORM">
 
-    <h3 class="titrem"><:webmention:cfg_titre_parametrages:></h3>
+    <h3 class="titrem"><:webmention:cfg_titre_reposts:></h3>
 
     [<p class="reponse_formulaire reponse_formulaire_ok">(#ENV*{message_ok})</p>]
     [<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
@@ -9,20 +9,21 @@
         <div>
             #ACTION_FORMULAIRE{#ENV{action}}
 
-            [(#SAISIE{input,feed_ids,
-                label=<:webmention:label_id_feeds:>,
+            [(#SAISIE{input,id_syndic,
+                label=<:webmention:label_id_syndic:>,
+                explication=<:webmention:explication_id_syndic:>,
                 obligatoire=oui})]
 
-            [(#SAISIE{input,author,
-                label=<:webmention:label_auteur:>,
+            [(#SAISIE{input,author_name,
+                label=<:webmention:label_author_name:>,
                 defaut=#NOM_SITE_SPIP})]
 
             [(#SAISIE{input,author_url,
-                label=<:webmention:label_source:>,
+                label=<:webmention:label_author_url:>,
                 defaut=#URL_SITE_SPIP})]
 
             [(#SAISIE{input,author_photo,
-                label=<:webmention:label_logo:>,
+                label=<:webmention:label_author_photo:>,
                 defaut=[(#LOGO_SITE_SPIP|extraire_attribut{src}|url_absolue)]})]
 
             <p class="boutons">

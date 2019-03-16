@@ -6,7 +6,7 @@ use Mf2\Mf2;
 include_spip('inc/config');
 
 function webmention_post_insertion($flux) {
-    $feedIds = lire_config('webmention/feed_ids');
+    $feedIds = lire_config('webmention/id_syndic');
 
     // Stop execution if no feed is selected.
     if (!isset($feedIds)) {

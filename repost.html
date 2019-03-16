@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>[(#CONFIG{webmention/auteur})] repost of “#TITRE”</title>
+    <title>[(#CONFIG{webmention/author_name})] repost of “#TITRE”</title>
 
     <style>
         body {
@@ -56,7 +56,7 @@
                 [<a
                     class="u-url p-name"
                     [href="(#CONFIG{webmention/author_url})"]
-                >(#CONFIG{webmention/author})</a>]
+                >(#CONFIG{webmention/author_name})</a>]
             </span>
 
             reposted:

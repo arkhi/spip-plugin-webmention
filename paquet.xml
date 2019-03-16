@@ -1,0 +1,31 @@
+<paquet
+    categorie="communication"
+    compatibilite="[3.0.0 ;3.*.*]"
+    developpement="https://github.com/arkhi/spip-plugin-webmention"
+    etat="experimental"
+    logo="webmention_logo.png"
+    prefix="webmention"
+    version="0.1.0"
+>
+    <nom>Webmention</nom>
+
+    <auteur
+        lien="https://arkhi.org/"
+        mail="spip@arkhi.org"
+    >
+        Fabien Basmaison
+    </auteur>
+
+    <licence lien="http://www.gnu.org/licenses/gpl-3.0.html">GPL 3</licence>
+
+    <pipeline nom="post_insertion" inclure="webmention_pipelines.php" />
+
+    <lib
+        nom="MentionClientPhp"
+        lien="https://github.com/indieweb/mention-client-php/archive/master.zip"
+    />
+    <lib
+        nom="Mf2"
+        lien="https://github.com/microformats/php-mf2/archive/master.zip"
+    />
+</paquet>

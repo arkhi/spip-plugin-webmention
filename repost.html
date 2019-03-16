@@ -1,0 +1,91 @@
+<BOUCLE_(SYNDIC_ARTICLES) { id_syndic_article=#ENV{id} }>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>[(#CONFIG{webmention/auteur})] repost of “#TITRE”</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+
+        .h-entry {
+             flex: 0 1 33em;
+             margin: 1.5em;
+        }
+
+        .u-repost-of {
+            border-bottom: solid #aaa 1px;
+            margin-bottom: 1em;
+        }
+
+        .e-content {
+            padding-left: 1em;
+            border-left: solid #aaa .25em;
+            margin-left: -1.25em;
+        }
+
+        @media screen and ( max-width: 16.5em ) {
+            .h-entry {
+                font-size: calc( .20em + 5vw );
+            }
+
+            .e-content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="h-entry">
+        <div class="h-cite u-repost-of">
+            <span class="u-author h-card">
+                [<img
+                    class="u-photo"
+                    src="(#CONFIG{webmention/author_photo})"
+                    width="40"
+                >]
+
+                [<a
+                    class="u-url p-name"
+                    [href="(#CONFIG{webmention/author_url})"]
+                >(#CONFIG{webmention/author})</a>]
+            </span>
+
+            reposted:
+
+            <p>
+                “<a
+                    id="article-#ENV{id}"
+                    class="u-url"
+                    href="#URL"[
+                    lang="(#LANG|=={#ENV{lang}}|?{'',#LANG})"][
+                    title="[(#LESAUTEURS|attribut_html): ](#TITRE|attribut_html)]"
+                >#TITRE</a>”
+            </p>
+
+            [<blockquote class="e-content">
+                (#DESCRIPTIF)
+            </blockquote>]
+        </div>
+
+        [<a
+            class="u-url"
+            [href="(#URL_PAGE{repost}|parametre_url{id,#ID_SYNDIC_ARTICLE}|url_absolue)"]
+        >
+            <time
+                class="dt-published"
+                [datetime="(#DATE|affdate{c})"]
+            >(#DATE|affdate)</time>
+        </a>]
+    </div>
+</body>
+</html>
+</BOUCLE_>

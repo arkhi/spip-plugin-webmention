@@ -1,0 +1,34 @@
+<div class="formulaire_spip formulaire_configurer formulaire_#FORM">
+
+    <h3 class="titrem"><:webmention:cfg_titre_parametrages:></h3>
+
+    [<p class="reponse_formulaire reponse_formulaire_ok">(#ENV*{message_ok})</p>]
+    [<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
+
+    <form method="post" action="#ENV{action}">
+        <div>
+            #ACTION_FORMULAIRE{#ENV{action}}
+
+            [(#SAISIE{input,feed_ids,
+                label=<:webmention:label_id_feeds:>,
+                obligatoire=oui})]
+
+            [(#SAISIE{input,author,
+                label=<:webmention:label_auteur:>,
+                defaut=#NOM_SITE_SPIP})]
+
+            [(#SAISIE{input,author_url,
+                label=<:webmention:label_source:>,
+                defaut=#URL_SITE_SPIP})]
+
+            [(#SAISIE{input,author_photo,
+                label=<:webmention:label_logo:>,
+                defaut=[(#LOGO_SITE_SPIP|extraire_attribut{src}|url_absolue)]})]
+
+            <p class="boutons">
+                <span class="image_loading"></span>
+                <input class="submit" type="submit" value="<:bouton_enregistrer:>" />
+            </p>
+        </div>
+    </form>
+</div>

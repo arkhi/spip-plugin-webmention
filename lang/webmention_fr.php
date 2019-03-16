@@ -4,6 +4,9 @@
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
+    // A
+    'a_reposte' => 'a republié :',
+
     // C
     'cfg_titre_reposts' => 'Reposts',
 

@@ -3,8 +3,6 @@
 use IndieWeb\MentionClient;
 use Mf2\Mf2;
 
-include_spip('inc/config');
-
 function webmention_post_insertion($flux) {
     $feedIds = lire_config('webmention/id_syndic');
 
@@ -34,21 +32,24 @@ function webmention_post_insertion($flux) {
     $client    = new MentionClient();
     $response  = $client->sendWebmention($sourceURL, $targetURL);
 
-    spip_log(
-        [
-            'sourceURL'          => $sourceURL,
-            'targetURL'          => $targetURL,
-            '$flux'              => $flux,
-            'rels'               => $client->c('rels', $targetURL),
-            'supportsPingback'   => $client->c('supportsPingback', $targetURL),
-            'supportsWebmention' => $client->c('supportsWebmention', $targetURL),
-            'webmentionServer'   => $client->c('webmentionServer', $targetURL),
-            'supportsWebmention' => $client->c('supportsWebmention', $targetURL),
-            'supportsWebmention' => $client->c('supportsWebmention', $targetURL),
-            'response'           => $response,
-        ],
-        'plugin_webmention.' . _LOG_INFO_IMPORTANTE
-    );
+
+    if (lire_config('webmention/debug') === 'on') {
+        spip_log(
+            [
+                'sourceURL'          => $sourceURL,
+                'targetURL'          => $targetURL,
+                '$flux'              => $flux,
+                'rels'               => $client->c('rels', $targetURL),
+                'supportsPingback'   => $client->c('supportsPingback', $targetURL),
+                'supportsWebmention' => $client->c('supportsWebmention', $targetURL),
+                'webmentionServer'   => $client->c('webmentionServer', $targetURL),
+                'supportsWebmention' => $client->c('supportsWebmention', $targetURL),
+                'supportsWebmention' => $client->c('supportsWebmention', $targetURL),
+                'response'           => $response,
+            ],
+            'plugin_webmention.' . _LOG_INFO_IMPORTANTE
+        );
+    }
 
     return $flux;
 }

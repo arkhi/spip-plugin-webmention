@@ -9,11 +9,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
     // E
     'explication_id_syndic' => 'Feed IDs split by commas: “3” or “23,42,71”',
+    'explication_debug' => 'Cache will be turned off.
+        <br>Information will be logged in tmp/log/webmention.log.',
 
     // L
     'label_author_name' => 'Name for author',
     'label_author_photo' => 'Avatar for author',
     'label_author_url' => 'URL for author',
+    'label_debug' => 'Enable debugging',
+    'label_debug_enabled' => 'Enabled',
     'label_id_syndic' => 'IDs for reposted feeds',
 
     // T

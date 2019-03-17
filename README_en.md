@@ -46,3 +46,8 @@ The current working use‑case which started this project is as follow:
 1. Display published articles from within the Spip based website.
 
 This equals to a `repost-of` webmention.
+
+## Acknowledgments
+
+- Logo comes from https://indieweb.org/File:webmention-logo.svg.
+- Thanks to the [spipers of IRC](https://kiwiirc.com/client/irc.freenode.net/spip) for their assistance.

@@ -46,3 +46,8 @@ L’usage actuel correspond à ce scénario :
 1. Affichage des articles publiés sur le site Spip.
 
 Cela correspond à une webmention de type `repost-of`.
+
+## Remerciements
+
+- Le logo vient de https://indieweb.org/File:webmention-logo.svg.
+- Merci aux [spipeurs d’IRC](https://kiwiirc.com/client/irc.freenode.net/spip) pour leur assistance.

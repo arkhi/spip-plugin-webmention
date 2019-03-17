@@ -19,8 +19,8 @@ This plugin offers:
 
 ### Zip file from Github
 
-1. Clone this repository or, on Github, [download the zip file of this repository](archive/master.zip).
-1. Uncompress the zip file in the “plugins” folder at the root of the spip website.
+1. Download the zip file of this repository.
+1. Uncompress it in the “plugins” folder at the root of the spip website.
 1. Configure the plugin within the Spip backend (`?exec=configurer_webmention`).
 
 ### With git

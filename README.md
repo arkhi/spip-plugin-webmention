@@ -19,8 +19,8 @@ Le plugin propose :
 
 ### Fichier zip sur Github
 
-1. [Télécharger le zip de ce dépôt](archive/master.zip).
-1. Décompresser le zip dans le dossier « plugins » du site Spip.
+1. Télécharger le fichier zip de ce dépôt.
+1. Décompresser le dans le dossier « plugins » du site Spip.
 1. Configurer le plugin depuis l’interface d’administration de Spip (`?exec=configurer_webmention`).
 
 ### Avec git

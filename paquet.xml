@@ -2,8 +2,9 @@
     categorie="communication"
     compatibilite="[3.0.0 ;3.*.*]"
     developpement="https://github.com/arkhi/spip-plugin-webmention"
+    documentation="https://github.com/arkhi/spip-plugin-webmention/README.md"
     etat="experimental"
-    logo="webmention_logo.png"
+    logo="prive/themes/spip/images/webmention-64.png"
     prefix="webmention"
     version="0.1.0"
 >

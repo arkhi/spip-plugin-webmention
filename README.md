@@ -17,7 +17,7 @@ Le plugin propose ce qui suit.
     - définir les valeurs personnalisées à utiliser pour le squelette (nom, URL, avatar) ;
     - un mode debug pour loguer les requêtes et réponses serveur.
 
-![capture d’écran qui représente les champs détaillés précédemment](./doc/configuration-reposts_fr.png "configuration des webmentions de type `repost-of`")
+![capture d’écran qui représente les champs détaillés précédemment](./doc/img/configuration-reposts_fr.png "configuration des webmentions de type `repost-of`")
 
 ## Installation
 

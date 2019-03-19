@@ -17,7 +17,7 @@ This plugin offers the following.
     - define custom values within the skeleton (name, URL, avatar);
     - a debug mode to log requests and server responses.
 
-![screenshot showing inputs explained previously](./doc/configuration-reposts_en.png "configuration of `repost-of` webmentions")
+![screenshot showing inputs explained previously](./doc/img/configuration-reposts_en.png "configuration of `repost-of` webmentions")
 
 ## Installation
 

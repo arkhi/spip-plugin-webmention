@@ -6,7 +6,9 @@ This project aims to implement [webmention](https://www.w3.org/TR/webmention/) i
 
 ## Features
 
-This plugin offers:
+This plugin offers the following.
+
+### Reposts
 
 - sending a webmention of type `repost-of` for each published item from a syndicated site;
 - a skeleton for the `repost-of` type;
@@ -14,6 +16,8 @@ This plugin offers:
     - filter feeds to repost;
     - define custom values within the skeleton (name, URL, avatar);
     - a debug mode to log requests and server responses.
+
+![screenshot showing inputs explained previously](./doc/configuration-reposts_en.png "configuration of `repost-of` webmentions")
 
 ## Installation
 

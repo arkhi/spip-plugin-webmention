@@ -6,7 +6,9 @@ Ce projet a pour but d’implémenter [webmention](https://www.w3.org/TR/webment
 
 ## État actuel
 
-Le plugin propose :
+Le plugin propose ce qui suit.
+
+### Reposts
 
 - l’envoi d’une webmention de type `repost-of` pour chaque article syndiqué publié ;
 - un squelette de type `repost-of` ;
@@ -14,6 +16,8 @@ Le plugin propose :
     - filtrer les flux à republier ;
     - définir les valeurs personnalisées à utiliser pour le squelette (nom, URL, avatar) ;
     - un mode debug pour loguer les requêtes et réponses serveur.
+
+![capture d’écran qui représente les champs détaillés précédemment](./doc/configuration-reposts_fr.png "configuration des webmentions de type `repost-of`")
 
 ## Installation
 

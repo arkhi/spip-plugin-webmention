@@ -1,5 +1,7 @@
 # Plugin webmention pour Spip
 
+**Ce dépôt est désormais maintenu sur https://framagit.org/arkhi/spip-plugin-webmention.**
+
 ([English](README_en.md) | **français**)
 
 Ce projet a pour but d’implémenter [webmention](https://www.w3.org/TR/webmention/) dans [Spip](https://spip.net/).
